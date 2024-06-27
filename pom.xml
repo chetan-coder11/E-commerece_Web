@@ -7,6 +7,25 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>mycart Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <build>
+  <plugins>
+	  <plugin> 
+	    <groupId>org.apache.tomcat.maven</groupId> 
+	    <artifactId>tomcat7-maven-plugin</artifactId> 
+	    <version>2.2</version> 
+	    <configuration> 
+	        <port>8080</port> 
+	    </configuration>
+	</plugin>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+  </plugins>
+  </build>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -22,22 +41,5 @@
 </dependency>
   
   <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-
-
-
-
-
-
   </dependencies>
-  
-  <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-
-  
-  
-  
-  
-  
-  <build>
-    <finalName>mycart</finalName>
-  </build>
 </project>
